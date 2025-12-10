@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Preview</title>
+
+  <!-- Dynamic Theme CSS Will Load Here -->
+  <link rel="stylesheet" id="themeCSS">
+
+  <style>
+    /* So page looks normal until theme loads */
+    body { background:#f2f2f2; font-family:Arial; }
+  </style>
+</head>
+<body>
+
+<div class="resume-container">
+
+  <!-- LEFT SIDE -->
+  <div class="left-col">
+    <img id="profilePicPreview" class="profile-img" src="" alt="Profile Picture">
+
+    <h2>Contact</h2>
+    <p id="emailPreview"></p>
+    <p id="phonePreview"></p>
+
+    <h2>Skills</h2>
+    <ul id="skillsPreview"></ul>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="right-col">
+    <h1 id="namePreview"></h1>
+
+    <h3 class="job-title">Professional Summary</h3>
+    <p id="summaryPreview"></p>
+
+    <h3>Education</h3>
+    <p id="educationPreview"></p>
+
+    <h3>Work Experience</h3>
+    <p id="experiencePreview"></p>
+
+    <button id="downloadBtn">Download PDF</button>
+  </div>
+
+</div>
+
+<!-- PDF Generator Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+<!-- Your Logic -->
+<script src="preview.js"></script>
+
+</body>
+</html>

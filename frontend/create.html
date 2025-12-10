@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Resume</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
+      padding: 20px;
+    }
+
+    .form-container {
+      background: white;
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #1976d2;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #1976d2;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0d47a1;
+    }
+
+    #generateAI {
+      background-color: #43a047;
+    }
+
+    #generateAI:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Resume Builder</h1>
+
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="phone" placeholder="Phone">
+
+    <textarea id="summary" placeholder="Profile Summary"></textarea>
+
+    <!-- AI Generator -->
+     
+    <textarea id="aiSummary" placeholder="Generate your summary using AI..."></textarea>
+    <button id="generateAI">✨ Generate Summary with AI</button>
+
+    <textarea id="skills" placeholder="Skills (comma separated)"></textarea>
+    <textarea id="education" placeholder="Education History"></textarea>
+    <textarea id="experience" placeholder="Work Experience"></textarea>
+
+    <label>Upload Profile Photo:</label>
+    <input type="file" id="profilePic" accept="image/*">
+
+    <button id="generateBtn">Generate Resume</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

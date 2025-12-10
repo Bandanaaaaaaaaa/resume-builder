@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Template</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <style>
+    .template-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .template-card {
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      width: 220px;
+      height: 180px;
+      text-align: center;
+      padding: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .template-card:hover {
+      transform: scale(1.05);
+      border-color: #ff69b4;
+    }
+    .selected {
+      border-color: #ff69b4;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+    }
+    #proceedBtn {
+      display: block;
+      margin: 40px auto;
+      padding: 12px 24px;
+      font-size: 18px;
+      color: white;
+      background: linear-gradient(to right, #ff69b4, #8a2be2);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #proceedBtn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center;">Choose Your Resume Style</h1>
+
+  <div class="template-container">
+    <div class="template-card" data-style="yellow">
+      <img src="images/yellow.png" alt="Yellow Theme" width="100">
+      <p>Yellow Creative</p>
+    </div>
+
+    <div class="template-card" data-style="simple">
+      <img src="images/simple.png" alt="Simple Theme" width="100">
+      <p>Simple Clean</p>
+    </div>
+
+    <div class="template-card" data-style="blue">
+      <img src="images/blue.png" alt="Blue Theme" width="100">
+      <p>Modern Blue</p>
+    </div>
+  </div>
+
+  <button id="proceedBtn">Proceed to Resume</button>
+
+  <script>
+    let selectedTemplate = null;
+    const cards = document.querySelectorAll('.template-card');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        cards.forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+        selectedTemplate = card.getAttribute('data-style');
+      });
+    });
+
+    document.getElementById('proceedBtn').addEventListener('click', () => {
+      if (selectedTemplate) {
+        localStorage.setItem('selectedTemplate', selectedTemplate);
+        window.location.href = 'preview.html';
+      } else {
+        alert('Please select a template before proceeding!');
+      }
+    });
+  </script>
+
+</body>
+</html>

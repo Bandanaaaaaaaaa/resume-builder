@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder | AI Powered</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f7f9fc;
+    }
+
+    /* Header */
+    header {
+      background: #0d6efd;
+      padding: 20px 50px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 50px;
+      text-align: center;
+      background: linear-gradient(to right, #0d6efd, #5596ff);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    .hero button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      background: white;
+      color: #0d6efd;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #d9e8ff;
+    }
+
+    /* AI Section */
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      border-radius: 12px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #0d6efd;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background: #0056d2;
+    }
+
+    #notice {
+      display: none;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      background: #0d6efd;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>ResumeBuilderAI</h1>
+    <nav>
+      <nav>
+  <a href="index.html">Home</a>
+  <a href="select-template.html">Templates</a>
+  <a href="create.html">Create Resume</a>
+  <a href="login.html">Login</a>
+ 
+</nav>
+
+      
+
+
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h2>Create Your Resume in Minutes</h2>
+    <p>Use AI to generate powerful descriptions, skills, summaries, and more.</p>
+    <button onclick="document.getElementById('ai-section').scrollIntoView()">Get Started</button>
+  </section>
+
+  <!-- AI SKILL GENERATOR -->
+  <div class="container" id="ai-section">
+    <h2>AI Skill Elaborator</h2>
+
+    <textarea id="skillsInput" placeholder="Enter skills (comma separated)"></textarea>
+
+    <button id="genBtn">Generate</button>
+    <button id="copyBtn">Copy</button>
+
+    <div id="notice"></div>
+
+    <textarea id="skillsOutput" placeholder="Your AI-generated text will appear here..."></textarea>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 ResumeBuilderAI • All Rights Reserved
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

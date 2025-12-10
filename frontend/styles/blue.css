@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #eef3f8;
+  margin: 0;
+  padding: 40px;
+}
+
+/* Main Resume Layout */
+.resume-container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.18);
+}
+
+/* LEFT COLUMN */
+.left-col {
+  width: 30%;
+  background: #005DAA; /* Blue sidebar */
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+/* Profile Picture */
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 100px;
+  object-fit: cover;
+  border: 4px solid white;
+  margin-bottom: 20px;
+}
+
+/* Contact Text */
+.left-col p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+/* Skill List */
+#skillsPreview {
+  padding-left: 0;
+  list-style: none;
+}
+
+#skillsPreview li {
+  margin: 6px 0;
+  padding: 6px;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.2);
+}
+
+/* RIGHT COLUMN */
+.right-col {
+  width: 70%;
+  padding: 35px;
+}
+
+/* Name */
+#namePreview {
+  font-size: 34px;
+  margin: 0;
+  color: #003366;
+}
+
+/* Section Titles */
+h3 {
+  margin-top: 25px;
+  font-weight: bold;
+  color: #005DAA;
+  border-bottom: 2px solid #c6d6e6;
+  padding-bottom: 4px;
+}
+
+/* Text Blocks */
+p {
+  line-height: 1.5;
+  color: #222;
+}
+
+/* PDF Button */
+button {
+  background: #005DAA;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #00447E;
+}
